@@ -1,0 +1,51 @@
+<%- include('../../header.ejs') %>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 left-side " >
+        <a href="/admin/dashboard" class="active text-light">Dashboard</a>
+        <a href="/admin/blog/display" class="text-light">Blogs</a>
+         <a href="/admin/category/display" class="text-light">Categories</a>
+        <a href="/admin/contact/display" class="text-light">Contact</a>
+      <a href="/admin/about/display" class="text-light">About</a>
+        <a href="/logout" class="text-light">Logout</a>
+      </div>
+      
+      <div class="col-md-9">
+        <div class="">
+         
+
+          <div class="row">
+            <h1 class="dash-heading">VIEW CATEGORY</h1>
+           <div class="col-md-3"></div>
+           <div class="col-md-6 dash-right">
+            <table class="table table-bordered">
+                <thead class="table-success">
+                  <tr>
+                    <th>Category Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                    <tr>
+                      <td><%= viewCategory.categoryName %> </td>
+                        
+                       
+                    </tr>
+                  
+                </tbody>
+              </table>
+              <a href="/admin/category/display"><button class="btn btn-success">Back</button></a>
+           </div>
+           
+           
+           <div class="col-md-3"></div>
+
+          
+         
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <%- include('../../footer.ejs') %>

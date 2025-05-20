@@ -1,0 +1,40 @@
+<%- include('./header.ejs') %>
+<div class="container-fluid">
+    <div class="container mt-2  blog-detail">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="mb-5 pb-5">
+                    <h4 class="text-center"> <%= details.title %></h4>
+                    
+                    <img src="<%= details.image.url %>" alt="" class="recentImg">
+                    <center>
+                       
+                        <p class="lead px-4">Description: <%= details.description %></p>
+                        <span class="text-muted d-block px-4">Date: <i><%= details.createdAt.toLocaleDateString() %></i></span>
+                   
+                    </center>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mb-5 pb-5">
+                    <h5 class="bg-dark text-white py-2 px-3">Recent Blogs</h5>
+                    <div class="row gy-3" style="max-height: 70vh; overflow-y: auto;">
+                        <% recentBlogs.forEach((recentItem) => { %>
+                            <div class=" col-sm-6 col-md-4 col-lg-8">
+                                <div class="card">
+                                    <img src="<%= recentItem.image.url %>" class="card-img-top recentImg2" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= recentItem.title %></h5>
+                                    <p class="card-text"><i><%= recentItem.createdAt.toLocaleDateString() %></i></p>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('./footer.ejs') %>

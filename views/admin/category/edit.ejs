@@ -1,0 +1,42 @@
+<%- include('../../header.ejs') %>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 left-side " >
+      <a href="/admin/dashboard" class="active text-light">Dashboard</a>
+      <a href="/admin/blog/display" class="text-light">Blogs</a>
+       <a href="/admin/category/display" class="text-light">Categories</a>
+      <a href="/admin/contact/display" class="text-light">Contact</a>
+    <a href="/admin/about/display" class="text-light">About</a>
+      <a href="/logout" class="text-light">Logout</a>
+    </div>
+    
+    <div class="col-md-9">
+      <h1 class="dash-heading">EDIT CATEGORY </h1>
+      <!-- Main content here -->
+      <div class="row">
+
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form action="/admin/category/update/<%= editCategory._id %>" method="post">
+                <div class="form-group mt-3">
+                  <label for="">Category</label>
+                  <input type="text" name="category" class="form-control" value="<%=editCategory.categoryName %>">
+                </div>
+                
+                  
+                  <button class="btn btn-success mt-3" type="submit">Update</button>
+                </div>
+              </form>
+        </div>
+        <div class="col-md-3"></div>
+        
+      </div>
+      
+      </div>
+    </div>
+  </div>
+
+<%- include('../../footer.ejs') %>

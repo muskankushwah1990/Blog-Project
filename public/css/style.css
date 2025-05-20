@@ -1,0 +1,808 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+
+nav{
+    background-color: #8295a4;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+nav img{
+    width: 100%;
+    height: 70px;
+    padding: 0 50px 0 0;
+}
+
+nav ul li a{
+    color:#fff !important;
+    padding: 10px 12px !important;
+
+}
+
+nav ul li a:hover{
+    border-bottom: 3px solid #fff ;
+   
+}
+
+
+
+
+
+
+
+.cardImage{
+    height: 350px;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+/* footer ****************************** */
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Background color */
+    text-align: center;
+    padding: 20px 0;
+    background-color: #8295a4;
+    color: #fff;
+  }
+
+
+
+
+
+
+
+
+
+  /* about card *************************************** */
+
+
+  .aboutCard{
+    height: 450px !important;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none !important;
+  }
+
+  .aboutCardImage{
+    height: 100% !important;
+    width: 100%;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+  }
+
+
+
+
+
+
+
+
+
+
+  /* Blog card ***************************************** */
+
+  .blogCardImage{
+    height: 300px !important;
+    width: 100%;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .blogButtonAndHeading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogButton{
+    margin: 10px;
+}
+
+
+
+
+
+
+
+/* *********home page */
+
+.homeBanner{
+    background: url(https://wallpaperaccess.com/full/1567666.png);
+    height: 570px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+  /* recente image ************************************ */
+
+  .recentImg{
+    height: 450px;
+    width: 100%;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+  }
+
+
+
+  .recentImgMany{
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+  }
+  .recentImg2 {
+    height: 200px;              /* Fixed height */
+    width: 100%;                /* Make it responsive (take up full width of the container) */
+    object-fit: cover;          /* The image will fill the container, cropping if necessary */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+/* General Styles */
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Left Sidebar  ***************************************/
+.left-side {
+    background-color: #081b29;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    top: 0;
+    left: 0;
+    padding-top: 120px;
+    color: #007bff;
+}
+
+.left-side a {
+    display: block;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.left-side a:hover {
+    
+    background-color: #8295a4;
+    
+}
+
+
+.left-side{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+
+
+
+
+/* dash-right************************** */
+
+
+
+
+
+
+
+
+
+/* Main Content *****************************/
+.col-md-9 {
+    margin-left: 250px; /* space for the sidebar */
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+
+/* dash  */
+.dash-right {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+
+  /* Header styles */
+  .dash-heading {
+    font-size: 36px;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .dash-right h2 {
+    font-size: 28px;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+  }
+
+  .dash-right h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  /* Styles for the user information */
+  .dash-right h3 i {
+    color: #888;
+    font-style: normal;
+  }
+
+  .dash-right p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+
+  /* blog display */
+
+  /* Wrapper for Table */
+.table-wrapper {
+    max-height: 400px;  /* Set a max height for vertical overflow */
+    overflow-y: auto;   /* Enable vertical scrolling if content exceeds max height */
+    overflow-x: auto;   /* Enable horizontal scrolling if the table is too wide */
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin-top: 20px;   /* Optional: spacing from other content */
+  }
+  
+  /* Optional: Hide overflow content when you want to completely hide it (no scrollbars) */
+  .table-wrapper.hidden-overflow {
+    overflow: hidden;
+    max-height: 400px; /* Ensure the table is contained within the height */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  /* about ***************************** */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 40px 10%;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Introduction */
+.intro {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+/* Mission Section */
+.mission {
+    background-color: #f3f3f3;
+    padding: 40px;
+}
+
+.mission p {
+    font-size: 1.15em;
+}
+
+/* History Section */
+.history {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history p {
+    font-size: 1.15em;
+}
+
+/* Core Values Section */
+.values {
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+.values ul li {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member {
+    display: inline-block;
+    width: 30%;
+    margin-right: 3%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-member img {
+    width: 100%;
+    height: 200px;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Vision Section */
+.vision {
+    background-color: #f3f3f3;
+    padding: 40px;
+}
+
+.vision p {
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ****************admin about ************************8 */
+
+
+.col-md-9 {
+    padding: 20px;
+}
+
+/* Dashboard Header */
+.dash-heading {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Main Content Area */
+.dash-right {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Image Section */
+.dash-right img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Textarea Styling */
+textarea.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+textarea.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Buttons Styling */
+button.btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.btn:hover {
+    opacity: 0.8;
+}
+
+/* Update Button */
+button.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+button.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Delete Button */
+button.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Margin for the buttons */
+button.mb-5 {
+    margin-bottom: 20px;
+}
+
+button.mt-3 {
+    margin-top: 15px;
+}
+
+
+
+
+
+/* blog edit************************* */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .col-md-9 {
+        padding: 10px;
+    }
+
+    .dash-heading {
+        font-size: 28px;
+    }
+
+    .dash-right {
+        padding: 15px;
+    }
+
+    .dash-right img {
+        width: 80%;
+    }
+
+    textarea.form-control {
+        font-size: 14px;
+    }
+
+
+    main {
+        padding: 20px;
+    }
+
+    .team-member {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+
+    section {
+        padding: 20px;
+    }
+
+    .team-member img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Adjustments for larger screens *********************************/
+@media (min-width: 1200px) {
+    .left-side {
+        width: 250px;
+    }
+    .col-md-9 {
+        margin-left: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Mobile View - Smaller Screens ************************************ */
+@media (max-width: 767px) {
+    .left-side {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+
+    nav ul li a:hover{
+        background-color: #081b29;
+        color: white !important;
+        padding: 6px 10px !important;
+        border-radius: 4px !important;
+        border-bottom: none;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%; /* Background color */
+        text-align: center;
+        padding: 10px 0;
+        background-color: rgb(225, 221, 221);
+        color: rgb(82, 75, 75);
+        font-size: 13px;
+      }
+
+   
+
+    .left-side a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Stack the content under the sidebar **********************************/
+    .col-md-9 {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+
+    .col-md-9 {
+        padding: 15px;
+      }
+
+      .dash-right {
+        padding: 20px;
+      }
+
+      .dash-heading {
+        font-size: 20px;
+        color: #333;
+        text-align: center;
+      }
+
+      .dash-right h2 {
+        font-size: 24px;
+      }
+
+      .dash-right h3 {
+        font-size: 16px;
+      }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet view ***************************************/
+@media (max-width: 992px) {
+    h3.display-4 {
+        font-size: 2rem;   /* Adjust title font size for tablets */
+    }
+
+    p.lead {
+        font-size: 1rem;   /* Adjust description font size for tablets */
+    }
+}
+
+
+
+
+@media (max-width: 425px) {
+    /* Adjust the table width */
+    .blogTable {
+        width: 100%; /* Make the table take full width */
+        overflow-x: auto; /* Add horizontal scrolling if the table overflows */
+    }
+
+  
+
+
+
+}
+

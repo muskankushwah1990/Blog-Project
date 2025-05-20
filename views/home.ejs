@@ -1,0 +1,33 @@
+<%- include('./header.ejs') %>
+<div class="container-fluid homeBanner">
+  
+  <h1  style="text-align: center;  padding-top: 200px; color: white; font-size: 5rem; font-family:cursive;">BLOGs </h1>
+</div>
+
+<div class="container mt-5">
+  <h1 class="mt-5 text-center">Blogs</h1>
+      <hr>
+    <div class="row  mt-5 mb-5">
+  
+      <!-- Card 6: Margin in Education -->
+    <% blogs.forEach((data) => { %>
+
+      <div class="col-md-4 col-sm-6 col-lg-3 mb-4">
+        <div class="card" >
+          <img src="<%= data.image.url %>" class="cardImage">
+          <div class="card-body">
+            <h5 class="card-title">Title : <%= data.title %></h5>
+            <p class="card-text">Description :<%= data.description %></p>
+            <p class="card-text">Date : <span><i> <%= data.createdAt.toLocaleDateString() %></i></span></p>
+            <a href="/blog-details/<%= data._id %>" class="btn btn-primary">Read more...</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  
+    </div>
+  </div>
+
+  <center><a href="/blog"><button class="btn btn-warning mb-t " style=" margin-bottom: 200px; padding: 15px 20px; font-size: 20px; color:rgb(55, 55, 75);">Explore more blogs</button></a></center>
+
+<%- include('./footer.ejs') %>

@@ -1,0 +1,58 @@
+
+
+<%- include('../../header.ejs') %>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 left-side " >
+        <a href="/admin/dashboard" class="active text-light">Dashboard</a>
+        <a href="/admin/blog/display" class="text-light">Blogs</a>
+         <a href="/admin/category/display" class="text-light">Categories</a>
+        <a href="/admin/contact/display" class="text-light">Contact</a>
+      <a href="/admin/about/display" class="text-light">About</a>
+        <a href="/logout" class="text-light">Logout</a>
+      </div>
+      
+      <div class="col-md-9">
+        <div class="">
+         
+
+          <div class="row">
+            <h1 class="dash-heading">DISPLAY CATEGORY</h1>
+           <div class="col-md-2"></div>
+           <div class="col-md-8 dash-right">
+            <table class="table table-bordered">
+                <thead class="table-success">
+                  <tr class="">
+                    <th>Category Name</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% displayCategory.forEach((item) => { %>
+                    <tr>
+                      <td><%= item.categoryName %> </td>
+                        
+                        <td>
+                          <a href="/admin/category/view/<%= item._id %>" class="btn btn-info"><i class="fa-regular fa-eye"></i></a>
+                        <a href="/admin/category/edit/<%= item._id %>" class="btn btn-success"><i class="fa-regular fa-pen-to-square"></i></a>
+                        <a href="/admin/category/delete/<%= item._id %>" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                      
+                    </tr>
+                  <% }) %>
+                </tbody>
+              </table>
+           </div>
+           
+           
+           <div class="col-md-2"></div>
+
+          
+         
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <%- include('../../footer.ejs') %>

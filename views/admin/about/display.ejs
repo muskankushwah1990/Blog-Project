@@ -1,0 +1,105 @@
+<%- include('../../header.ejs') %>
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 left-side " >
+      <a href="/admin/dashboard" class="active text-light">Dashboard</a>
+      <a href="/admin/blog/display" class="text-light">Blogs</a>
+       <a href="/admin/category/display" class="text-light">Categories</a>
+      <a href="/admin/contact/display" class="text-light">Contact</a>
+    <a href="/admin/about/display" class="text-light">About</a>
+      <a href="/logout" class="text-light">Logout</a>
+    </div>
+    
+    <div class="col-md-9">
+     
+      <!-- Main content here -->
+      <div class="dash-right">
+        <div class="blogButton">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Add Blog
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Add Blog
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form action="/about" method="post" enctype="multipart/form-data">
+                  
+                    <div class="mt-3">
+                      <label for="">Discription</label>
+                      <textarea
+                        type="text"
+                        name="description"
+                        class="form-control"
+                      >
+                      </textarea>
+                    </div>
+                    <div class="mt-3">
+                      <label for="">Upload Image</label>
+                      <input
+                        type="file"
+                        name="image"
+                        class="form-control"
+                      />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">
+                      Add
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div >
+          <div>
+            <img src="<%= display.image.url %>" alt="aboutImage" width="30%">
+           </div>
+           <div>
+            <textarea rows="3" class="form-control mt-5"><%= display.description %></textarea>
+           </div>
+           <a href="/admin/about/edit/<%= display._id %>"><button class="btn btn-success mb-5 mt-3">Update</button></a>
+           <a href="/admin/about/deleted/<%= display._id %>"><button class="btn btn-danger mb-5 mt-3">Delete</button></a>
+
+
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../../footer.ejs') %>
+
+
+

@@ -1,0 +1,27 @@
+<%- include("./header.ejs") %>
+
+<section class="cmspage mtb-40">
+    <div class="container">
+      <div class="page-desc">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <h1 class="text-center mb-5 mt-3 "> Add Category</h1>
+            
+            <form action="/category" method="post">
+              <div class="form-group mt-3">
+                <label for="">Category</label>
+                <input type="text" name="category" class="form-control">
+              </div>
+              
+                
+                <button class="btn btn-success mt-3" type="submit">Add Category</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<%- include("./footer.ejs") %>

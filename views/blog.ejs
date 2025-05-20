@@ -1,0 +1,27 @@
+<%- include('./header.ejs') %>
+
+<section class="blog-list mtb-40">
+    <div class="container">
+      <h1 class="mt-5 text-center">Blogs</h1>
+      <hr>
+      <div class="row my-5">
+        <% blogs.forEach((item) => { %>
+          <div class="col-md-4 col-sm-6 col-lg-3 " style="margin-bottom: 60px;">
+            <div class="card" style="width: 100%;">
+              <img src="<%= item.image.url %>" class="cardImage" alt="...">
+             
+
+              <div class="card-body">
+                <h5 class="card-title">Title : <%= item.title %></h5>
+                <p class="card-text">Description :<%= item.description %></p>
+                <p class="card-text">Date : <span><i> <%= item.createdAt.toLocaleDateString() %></i></span></p>
+               
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+</section>
+
+<%- include('./footer.ejs') %>

@@ -1,0 +1,32 @@
+
+
+
+<%- include('../../header.ejs') %>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 left-side " >
+        <a href="/admin/dashboard" class="active text-light">Dashboard</a>
+        <a href="/admin/blog/display" class="text-light">Blogs</a>
+         <a href="/admin/category/display" class="text-light">Categories</a>
+        <a href="/admin/contact/display" class="text-light">Contact</a>
+      <a href="/admin/about/display" class="text-light">About</a>
+        <a href="/logout" class="text-light">Logout</a>
+      </div>
+      
+      <div class="col-md-9">
+        <h1 class="dash-heading">WELCOME TO THE ADMIN DASHBOARD</h1>
+        <!-- Main content here -->
+        <div class="dash-right">
+          
+          <h2>Welcome, <%= name %></h2>
+          <h3>Your Email: <i><%= email %></i></h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem id mollitia corrupti vitae illum. Illo, ullam qui, distinctio fugiat illum quas animi numquam, dicta tempora recusandae optio nihil aliquid. Officiis!</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../../footer.ejs') %>
+  

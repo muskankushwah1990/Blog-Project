@@ -1,0 +1,280 @@
+/* General reset and layout adjustments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #081b29 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Wrapper for overall layout */
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 239, 255, 0.8);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+    transition: 0.3s;
+}
+
+/* Info text section */
+.wrapper .info-text {
+    color: #fff;
+    padding-right: 40px;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper .info-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0ef;
+    margin-bottom: 20px;
+}
+
+.wrapper .info-text p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Form-box styles */
+.form-box {
+    flex: 1;
+    background: #0f1a2b;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 239, 255, 0.5);
+    transition: 0.3s;
+}
+
+h2 {
+    font-size: 28px;
+    color: #fff !important;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input box styling */
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #0ef;
+}
+
+.input-box label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -10px;
+    color: #0ef;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.input-box input:focus ~ i,
+.input-box input:valid ~ i {
+    color: #0ef;
+}
+
+/* Button styling */
+.loginbtn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #0ef;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    transition: 0.3s;
+    outline: none;
+}
+
+.loginbtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #081b29, #0ef);
+    z-index: -1;
+    transition: 0.3s;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.loginbtn:hover::before {
+    transform: scaleY(1);
+}
+
+.loginbtn:hover {
+    background-color: rgba(0, 239, 255, 0.8);
+    color: #081b29;
+}
+
+/* Log-reg link styles */
+.logreg-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.logreg-link p {
+    color: #fff;
+}
+
+.logreg-link p a {
+    color: #0ef;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logreg-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Background animation styles */
+.bg-animate, .bg-animate2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 900px;
+    height: 900px;
+    background: linear-gradient(45deg, #081b29, #0ef);
+    border-radius: 50%;
+    transform-origin: center;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .wrapper .info-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .form-box {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+    }
+
+    .input-box label,
+    .input-box i {
+        font-size: 14px;
+    }
+
+    .loginbtn {
+        font-size: 16px;
+    }
+
+    .logreg-link p {
+        font-size: 12px;
+    }
+
+    .bg-animate,
+    .bg-animate2 {
+        width: 700px;
+        height: 700px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .input-box input {
+        font-size: 12px;
+    }
+
+    .input-box label,
+    .input-box i {
+        font-size: 12px;
+    }
+
+    .loginbtn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .logreg-link p {
+        font-size: 10px;
+    }
+
+    .bg-animate,
+    .bg-animate2 {
+        width: 500px;
+        height: 500px;
+    }
+}

@@ -1,0 +1,53 @@
+<%- include('../../header.ejs') %>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 left-side " >
+      <a href="/admin/dashboard" class="active text-light">Dashboard</a>
+      <a href="/admin/blog/display" class="text-light">Blogs</a>
+       <a href="/admin/category/display" class="text-light">Categories</a>
+      <a href="/admin/contact/display" class="text-light">Contact</a>
+    <a href="/admin/about/display" class="text-light">About</a>
+      <a href="/logout" class="text-light">Logout</a>
+    </div>
+    
+    <div class="col-md-9">
+      <h1 class="dash-heading">CONTACT LIST</h1>
+      <!-- Main content here -->
+      <div class="dash-right">
+
+        <div class="col-md-12 blogTable mb-5 pb-5">
+          <div class="table-wrapper"> <!-- Wrapper div for overflow handling -->
+            <table class="table table-bordered">
+              <thead class="table-primary">
+                <tr class="">
+                  <th>#ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Message</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% contactDisplay.forEach((item) => { %>
+                <tr>
+                  <td><%= item._id %></td>
+                  <td><%= item.name %></td>
+                  <td><%= item.email %></td>
+                  <td><%= item.phone %></td>
+                  <td><%= item.message %></td>
+                </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+      
+      </div>
+    </div>
+  </div>
+
+<%- include('../../footer.ejs') %>
