@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
-const url = "mongodb://127.0.0.1:27017/BlogProject"
+
 
 const connectDb = () => {
-    return mongoose.connect(url)
+    return mongoose.connect(process.env.LIVE_URL)
    .then(() => {
-    console.log("database connected")
+    console.log("live database connected")
    })
    .catch((err) => {
     console.log(err)

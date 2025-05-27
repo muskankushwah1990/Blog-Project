@@ -58,7 +58,7 @@ class AdminController {
                     //generate token
                     const token = jwt.sign({
                         id: admin._id
-                    }, "tuniklachhuparustam")
+                    }, process.env.JWT_SECRET_KEY)
                     // console.log(token)
                     res.cookie('token', token)
                     res.redirect('/admin/dashboard')

@@ -1,9 +1,9 @@
 const AboutModel = require('../../models/About')
 const cloudinary = require('cloudinary')
 cloudinary.config({
-    cloud_name: 'dg6g8fnii',
-    api_key: '364626995131484',
-    api_secret: 'HF5XJowO_L21gOejLPjOORKI_ts',
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET,
     // secure: true
 })
 

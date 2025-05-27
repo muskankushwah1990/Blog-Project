@@ -11,6 +11,8 @@ const flash = require('connect-flash')
 
 const cookieParser = require('cookie-parser')
 app.use(cookieParser())
+const dotenv = require('dotenv')
+dotenv.config({path: '.env'})
 
 cloudinary.config({
     cloud_name: 'dg6g8fnii',

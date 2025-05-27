@@ -33,7 +33,7 @@ router.get('/teacher/display', TeacherController.display)
 
 //admin dashboard
 router.get('/admin/dashboard',AdminAuth, AdminController.dashboard)
-router.post('/', AdminController.register)
+router.post('/register', AdminController.register)
 router.post('/login', AdminController.login)
 router.get('/logout', AdminController.logout)
 
